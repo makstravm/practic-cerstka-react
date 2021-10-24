@@ -289,7 +289,7 @@ function App() {
         <GalleryImage image={'http://chicago-barbershop.mykulenko.com.ua/images/gallery/12.jpg'} />
       </Gallery>
       
-      <Footer text={' © 2021 «CHICAGO» BARBERSHOP.'}>
+      <Footer text={' © 2021 «CHICAGO» BARBERSHOP.»'}>
         <FooterItem subtitle={'Наши услуги'}>
           <FooterListItem link={'#'} text={'Стрижка с укладкой'} />
           <FooterListItem link={'#'} text={'Детская стрижка'} />
