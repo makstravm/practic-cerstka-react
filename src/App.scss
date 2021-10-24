@@ -1,0 +1,414 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  font-size: 10px;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 48px;
+  line-height: 62px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.header {
+  background-image: url(http://chicago-barbershop.mykulenko.com.ua/images/home-bg.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  color: #fff;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+  }
+  &__content {
+    align-items: center;
+    margin: 12vh auto 100px;
+    max-width: 600px;
+    width: 100%;
+  }
+  &__content-top {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 40px;
+    text-align: center;
+  }
+  &__content-top,
+  &__content-item {
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.6);
+  }
+  &__subtitle {
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  &__title {
+    font-size: 50px;
+    line-height: 64px;
+    letter-spacing: 5.5px;
+  }
+  &__content-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content-item {
+    width: 150px;
+    text-align: center;
+    padding: 15px 10px;
+    & + .header__content-item {
+      margin-left: 15px;
+    }
+  }
+  &__item-title {
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 24px;
+    position: relative;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%);
+      height: 1px;
+      width: 60px;
+      background-color: #fff;
+    }
+  }
+  &__item-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+  &__item {
+    & + .menu__item {
+      margin-left: 25px;
+    }
+  }
+  &__link {
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 5px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s;
+    &:hover {
+      border-bottom: 1px solid #fff;
+    }
+  }
+}
+.address {
+  &__phone,
+  &__link {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    font-size: 1.2rem;
+  }
+  &__phone {
+    margin-bottom: 5px;
+  }
+}
+
+.about {
+  padding: 10vh 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  img {
+    margin-top: -25px;
+    max-width: 370px;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+  }
+  &__content {
+    margin-left: 35px;
+  }
+  &__title {
+    padding-bottom: 20px;
+    display: inline-block;
+    border-bottom: 1px solid #ececec;
+  }
+  &__text {
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+}
+
+.price {
+  padding: 50px 0;
+  &__inner {
+    display: flex;
+  }
+  &__booking {
+    margin-top: 15px;
+    max-width: 370px;
+  }
+  &__booking-text {
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-bottom: 25px;
+  }
+  &__booking-box {
+    background-color: #ed4b2b;
+    padding: 25px 50px;
+    display: inline-block;
+    transition: all 0.3s;
+    &:hover {
+      background-color: #ed9b3b;
+    }
+  }
+  &__booking-link {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    border-bottom: 1px dotted #fff;
+  }
+  &__content {
+    margin-left: 35px;
+  }
+  &__content-inner {
+    background-color: #414141;
+    color: #fff;
+    padding: 35px 20px;
+  }
+  &__text {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding-right: 5px;
+    background-color: #414141;
+  }
+  &__text-box {
+    background-image: url(http://chicago-barbershop.mykulenko.com.ua/images/bg-text.svg);
+    background-repeat: repeat;
+    background-position: center center;
+    strong {
+      float: right;
+      background-color: #414141;
+      padding-left: 5px;
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
+  }
+}
+
+.team {
+  background-image: url(http://chicago-barbershop.mykulenko.com.ua/images/bg-team.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 100px 0;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(http://chicago-barbershop.mykulenko.com.ua/images/bg-section-before.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+    left: 0;
+    height: 95px;
+    right: 0;
+  }
+  &::before {
+    top: -5px;
+  }
+  &::after {
+    bottom: -5px;
+    transform: scale(-1);
+  }
+  &__title {
+    text-align: center;
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 35px;
+  }
+  &__item {
+    width: 350px;
+    margin: 0 auto;
+  }
+  &__item-box {
+    margin-bottom: 25px;
+    img {
+      height: 425px;
+      object-fit: cover;
+      margin: 0 auto;
+    }
+  }
+  &__name {
+    display: inline-block;
+    font-size: 36px;
+    line-height: 48px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+  }
+  &__name-link {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      width: 100%;
+      background-color: transparent;
+      transition: all 0.3s;
+    }
+    &:hover::after {
+      background-color: #fff;
+    }
+  }
+  &__text {
+    font-size: 20px;
+    font-size: 1.4rem;
+  }
+}
+
+.gallery {
+  padding: 75px 0;
+  &-page {
+    padding-top: 150px;
+  }
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  img {
+    width: 24%;
+    margin: 1px;
+    object-fit: cover;
+    height: 350px;
+  }
+}
+
+.footer {
+  background-image: url(http://chicago-barbershop.mykulenko.com.ua/images/footer-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  color: #fff;
+  padding: 100px 0 50px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    right: 0;
+    background-image: url(http://chicago-barbershop.mykulenko.com.ua/images/bg-section-before.png);
+    height: 95px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  &__item-box {
+    margin-top: 25px;
+  }
+  &__subtitle {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    line-height: 36px;
+    margin-bottom: 35px;
+  }
+  &__link {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s;
+    &:hover {
+      border-bottom: 1px solid #fff;
+    }
+  }
+  &__bottom {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
